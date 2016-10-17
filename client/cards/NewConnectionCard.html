@@ -10,6 +10,8 @@
     </div>
     <div class="row">
       <div class="col-md-8 col-md-offset-2">
+        <div class="panel panel-default">
+          <div class="panel-body">
     {{#autoForm collection="Connections" id="insertCardForm" type="insert" class="form-inline"}}
     <fieldset>
       {{> afQuickField name='service' options=services}}
@@ -36,6 +38,7 @@
     <fieldset>
       {{> afQuickField name='meal'}}<br />
       {{#if $.Session.get 'mealTime'}}
+        <p>Please mark how many guests we should expect.</p>
         {{> afQuickField name='num_kids'}}
         {{> afQuickField name='num_youth'}}
         {{> afQuickField name='num_adult'}}
@@ -43,6 +46,8 @@
     </fieldset>
       <button type="submit" form="insertCardForm" class="btn btn-primary">Submit</button>
     {{/autoForm}}
+        </div>
+        </div>
       </div>
     </div>
   </div>

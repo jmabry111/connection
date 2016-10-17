@@ -92,7 +92,7 @@ ConnectionSchema = new SimpleSchema({
   },
   meal: {
     type: Boolean,
-    label: "Wed night meal?",
+    label: "Will you attend our Wednesday night meal?",
     autoform: {
       afFieldInput: {
         class: 'checked'
