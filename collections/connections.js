@@ -1,37 +1,81 @@
 Connections = new Meteor.Collection('connections');
 
+Connections.allow({
+
+});
+
 ConnectionSchema = new SimpleSchema({
-  time: {
+  service: {
     type: String,
-    label: "Service time"
+    label: "Service"
   },
-  family: {
+  name: {
     type: String,
-    label: "Name"
+    label: "Name",
+    autoform: {
+      afFieldInput: {
+        class: 'wide'
+      }
+    }
   },
   street: {
     type: String,
-    label: "Street"
+    label: "Street",
+    optional: true,
+    autoform: {
+      afFieldInput: {
+        class: 'wide'
+      }
+    }
   },
   city: {
     type: String,
-    label: "City"
+    label: "City",
+    optional: true,
+    autoform: {
+      afFieldInput: {
+        class: 'medium'
+      }
+    }
   },
   state: {
     type: String,
-    label: "State"
+    label: "State",
+    autoform: {
+      afFieldInput: {
+        class: 'small'
+      }
+    }
   },
   zip: {
     type: String,
-    label: "Zip Code"
+    label: "Zip Code",
+    optional: true,
+    autoform: {
+      afFieldInput: {
+        class: 'small'
+      }
+    }
   },
   email: {
     type: String,
-    label: "Email"
+    regEx: SimpleSchema.RegEx.Email,
+    label: "Email",
+    optional: true,
+    autoform: {
+      afFieldInput: {
+        class: 'medium'
+      }
+    }
   },
   phone: {
     type: String,
-    label: "Phone"
+    label: "Phone",
+    autoform: {
+      afFieldInput: {
+        class: 'medium'
+      }
+    }
   },
   text: {
     type: Boolean,
@@ -39,37 +83,83 @@ ConnectionSchema = new SimpleSchema({
   },
   membership_status: {
     type: String,
-    label: "Status"
+    label: "I am a:"
   },
   age_range: {
     type: String,
-    label: "Age Group"
+    label: "Age Group",
+    optional: true,
   },
   meal: {
     type: Boolean,
-    label: "Wed night meal?"
+    label: "Wed night meal?",
+    autoform: {
+      afFieldInput: {
+        class: 'checked'
+      }
+    }
   },
   num_kids: {
     type: Number,
-    label: "Age 3 & under"
+    label: "Age 3 & under",
+    optional: true,
+    autoform: {
+      afFieldInput: {
+        class: 'small'
+      }
+    }
   },
   num_youth: {
     type: Number,
-    label: "Ages 4&mdash;12"
+    label: "Ages 4 - 12",
+    optional: true,
+    autoform: {
+      afFieldInput: {
+        class: 'small'
+      }
+    }
   },
   num_adult: {
     type: Number,
-    label: "Age 13 & up"
+    label: "Age 13 & up",
+    optional: true,
+    autoform: {
+      afFieldInput: {
+        class: 'small'
+      }
+    }
+  },
+  prayers: {
+    type: String,
+    label: "Comments or Prayer Requests",
+    optional: true,
+    autoform: {
+      afFieldInput: {
+        class: 'wide'
+      }
+    }
   },
   contact_me: {
     type: String,
-    label: "Please contact me about"
+    label: "Please contact me about",
+    optional: true,
   },
   createdAt: {
     type: Date,
     label: "Created At",
     autoValue: function() {
       return new Date()
+    },
+    autoform: {
+      type: "hidden"
     }
   }
 });
+
+Meteor.methods({
+  deleteConnection: function(id) {
+    Connections.remove(id);
+  }
+});
+
+Connections.attachSchema(ConnectionSchema);

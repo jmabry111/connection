@@ -1,0 +1,14 @@
+<template name="Cards">
+
+  <section class="cards">
+    {{#if Template.subscriptionsReady}}
+      {{#each connections}}
+        <div class="col-md-10 col-md-offset-1">
+        {{> Connection}}
+        </div>
+      {{/each}}
+    {{else}}
+      <p> Loading...</p>
+    {{/if}}
+  </section>
+</template>

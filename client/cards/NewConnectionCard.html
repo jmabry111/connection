@@ -1,0 +1,49 @@
+<template name="NewConnectionCard">
+  <div class="container">
+    <div class="row">
+    <div class="col-md-10 col-md-offset-1 jumbotron">
+      <h2>
+        Welcome to Stone Memorial Christian Church!<br /><br />
+        Please take a moment and fill out our new online connection card.
+      </h2>
+    </div>
+    </div>
+    <div class="row">
+      <div class="col-md-8 col-md-offset-2">
+    {{#autoForm collection="Connections" id="insertCardForm" type="insert" class="form-inline"}}
+    <fieldset>
+      {{> afQuickField name='service' options=services}}
+    </fieldset>
+    <fieldset>
+      {{> afQuickField name='name'}}<br />
+      {{> afQuickField name='email'}}
+      {{> afQuickField name='phone'}}
+      {{> afQuickField name='text'}}
+    </fieldset>
+    <fieldset>
+      {{> afQuickField name='age_range' options=age}}
+    </fieldset>
+    <fieldset>
+      {{> afQuickField name='street'}}<br />
+      {{> afQuickField name='city'}} {{> afQuickField name='state'}}, {{> afQuickField name='zip'}}
+    </fieldset>
+    <fieldset>
+      {{> afQuickField name='membership_status' options=membership}}<br />
+      {{> afQuickField name='contact_me' options=contact}}<br /><br />
+      {{> afQuickField name='prayers' rows=6}}
+    </fieldset>
+      <hr />
+    <fieldset>
+      {{> afQuickField name='meal'}}<br />
+      {{#if $.Session.get 'mealTime'}}
+        {{> afQuickField name='num_kids'}}
+        {{> afQuickField name='num_youth'}}
+        {{> afQuickField name='num_adult'}}
+      {{/if}}
+    </fieldset>
+      <button type="submit" form="insertCardForm" class="btn btn-primary">Submit</button>
+    {{/autoForm}}
+      </div>
+    </div>
+  </div>
+</template>

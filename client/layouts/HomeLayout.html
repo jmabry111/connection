@@ -1,11 +1,5 @@
 <template name="HomeLayout">
-  <header>
-    <h1>Connection Card</h1>
-    {{> loginButtons}}
-  </header>
-  <main>
-    <div class="billboard">
-      <h2>Connect with us</h2>
-    </div>
+  <main class="home-layout">
+    {{> Template.dynamic template=main}}
   </main>
 </template>

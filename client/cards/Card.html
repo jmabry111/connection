@@ -1,0 +1,52 @@
+<template name="Connection">
+  <div class="panel panel-default">
+    <div class="panel-body">
+    <div class="pull-right">
+      <i class="fa fa-trash"></i>
+    </div>
+    <h2 class="text-center card-name">{{name}}</h2>
+      <div class="row">
+    <div class="col-lg-4 col-md-4 col-sm-4">
+    <address class="address">
+      <strong>Address:</strong><br />
+      {{street}}<br />
+      {{city}}, {{state}} {{zip}}
+    </address>
+    <p>
+      <strong>Email address: </strong>
+      <a href="mailto:{{email}}">{{email}}</a><br />
+      <strong>Phone number: </strong>
+      <a href="tel:{{phone}}">{{phone}}</a>
+      {{#if text}} &mdash; <em>Texts are ok</em>{{/if}}
+      <br /><br />
+      I am a <strong>{{membership_status}}</strong>, and am in the <strong>{{age_range}}</strong> age range.
+    </p>
+    </div>
+    <div class="col-md-4 col-md-offset-2">
+    {{#if meal}}
+      <h4>Wednesday Night Meal Info:</h4>
+      <p>
+        Attending:
+        <ul>
+          <li><span class="underline">&nbsp;{{num_kids}}&nbsp;</span> children age 3 and under</li>
+          <li><span class="underline">&nbsp;{{num_youth}}&nbsp;</span> youth age 4 - 12</li>
+          <li><span class="underline">&nbsp;{{num_adult}}&nbsp;</span> adults</li>
+        </ul>
+      </p>
+    {{else}}
+      <p>Sorry, we will be unable to attend the meal on Wednesday. &#9785;</p>
+    {{/if}}
+    </div>
+    </div>
+    <div class="row">
+      <hr />
+      <h4 class="text-center">
+        Prayer requests and comments
+      </h4>
+      <p class="text-center prayers">
+        {{prayers}}
+      </p>
+    </div>
+    </div>
+  </div>
+</template>

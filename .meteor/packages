@@ -28,7 +28,6 @@ fastclick
 raix:handlebar-helpers
 aldeed:collection2
 aldeed:autoform
-accounts-ui
 accounts-password
 matb33:bootstrap-glyphicons
 meteortoys:allthings
@@ -36,3 +35,8 @@ zimme:active-route
 gwendall:auth-client-callbacks
 datariot:ganalytics
 check
+insecure
+less
+twbs:bootstrap@=3.3.6
+stylus
+ian:accounts-ui-bootstrap-3@=1.2.89
