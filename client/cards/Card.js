@@ -3,4 +3,3 @@ Template.Connection.events({
     Meteor.call('deleteConnection', this._id);
   }
 });
-
