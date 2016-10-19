@@ -12,70 +12,35 @@ ConnectionSchema = new SimpleSchema({
   name: {
     type: String,
     label: "Name",
-    autoform: {
-      afFieldInput: {
-        class: 'wide'
-      }
-    }
   },
   street: {
     type: String,
     label: "Street",
     optional: true,
-    autoform: {
-      afFieldInput: {
-        class: 'wide'
-      }
-    }
   },
   city: {
     type: String,
     label: "City",
     optional: true,
-    autoform: {
-      afFieldInput: {
-        class: 'medium'
-      }
-    }
   },
   state: {
     type: String,
     label: "State",
-    autoform: {
-      afFieldInput: {
-        class: 'small'
-      }
-    }
   },
   zip: {
     type: String,
     label: "Zip Code",
     optional: true,
-    autoform: {
-      afFieldInput: {
-        class: 'small'
-      }
-    }
   },
   email: {
     type: String,
     regEx: SimpleSchema.RegEx.Email,
     label: "Email",
     optional: true,
-    autoform: {
-      afFieldInput: {
-        class: 'medium'
-      }
-    }
   },
   phone: {
     type: String,
     label: "Phone",
-    autoform: {
-      afFieldInput: {
-        class: 'medium'
-      }
-    }
   },
   text: {
     type: Boolean,
@@ -133,11 +98,6 @@ ConnectionSchema = new SimpleSchema({
     type: String,
     label: "Comments or Prayer Requests",
     optional: true,
-    autoform: {
-      afFieldInput: {
-        class: 'wide'
-      }
-    }
   },
   contact_me: {
     type: String,

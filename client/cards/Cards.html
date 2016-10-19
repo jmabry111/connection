@@ -1,5 +1,5 @@
 <template name="Cards">
-
+  <div class="container-fluid">
   <section class="cards">
     {{#if Template.subscriptionsReady}}
       {{#each connections}}
@@ -11,4 +11,5 @@
       <p> Loading...</p>
     {{/if}}
   </section>
+  </div>
 </template>

@@ -1,7 +1,7 @@
 <template name="NewConnectionCard">
-  <div class="container">
+  <div class="container-fluid">
     <div class="row">
-    <div class="col-md-10 col-md-offset-1 jumbotron">
+    <div class="col-md-8 col-md-offset-2 jumbotron">
       <h2>
         Welcome to Stone Memorial Christian Church!<br /><br />
         Please take a moment and fill out our new online connection card.
@@ -12,12 +12,12 @@
       <div class="col-md-8 col-md-offset-2">
         <div class="panel panel-default">
           <div class="panel-body">
-    {{#autoForm collection="Connections" id="insertCardForm" type="insert" class="form-inline"}}
+    {{#autoForm collection="Connections" id="insertCardForm" type="insert"}}
     <fieldset>
       {{> afQuickField name='service' options=services}}
     </fieldset>
     <fieldset>
-      {{> afQuickField name='name'}}<br />
+      {{> afQuickField name='name'}}
       {{> afQuickField name='email'}}
       {{> afQuickField name='phone'}}
       {{> afQuickField name='text'}}
