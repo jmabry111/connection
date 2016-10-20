@@ -40,12 +40,14 @@
       <hr />
     <fieldset>
       {{> afQuickField name='meal'}}<br />
+      <div id="mealCount">
       {{#if $.Session.get 'mealTime'}}
-        <p>Please mark how many guests we should expect.</p>
-        {{> afQuickField name='num_kids'}}
-        {{> afQuickField name='num_youth'}}
-        {{> afQuickField name='num_adult'}}
+            <p>Please mark how many guests we should expect.</p>
+            {{> afQuickField name='num_kids'}}
+            {{> afQuickField name='num_youth'}}
+            {{> afQuickField name='num_adult'}}
       {{/if}}
+      </div>
     </fieldset>
       <button type="submit" form="insertCardForm" class="btn btn-primary">Submit</button>
     {{/autoForm}}

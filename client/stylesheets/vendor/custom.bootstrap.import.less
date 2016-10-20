@@ -935,3 +935,18 @@ body {
 .red {
   color: red;
 }
+
+#mealCount {
+  opacity: 0;
+  transition: opacity 0.6s ease-in, display 0.4s step-end;
+  -ms-transition: opacity 0.6s ease-in, display 0.4s step-end;
+  -moz-transition: opacity 0.6s ease-in, display 0.4s step-end;
+  -webkit-transition: opacity 0.6s ease-in, display 0.4s step-end;
+}
+#mealCount.show {
+  opacity: 1;
+  transition: opacity 0.6s ease-in, display 0.4s step-start;
+  -ms-transition: opacity 0.6s ease-in, display 0.4s step-start;
+  -moz-transition: opacity 0.6s ease-in, display 0.4s step-start;
+  -webkit-transition: opacity 0.6s ease-in, display 0.4s step-start;
+}

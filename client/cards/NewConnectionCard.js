@@ -5,8 +5,10 @@ Template.NewConnectionCard.events({
   'change .checked' : ()=> {
     var m = document.getElementsByClassName('checked');
     if (m.meal.checked)
+      document.getElementById('mealCount').className="show",
       Session.set('mealTime', true);
     else
+      document.getElementById('mealCount').className="noshow",
       Session.set('mealTime', false);
   }
 });
