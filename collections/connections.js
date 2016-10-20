@@ -7,11 +7,11 @@ Connections.allow({
 ConnectionSchema = new SimpleSchema({
   service: {
     type: String,
-    label: "Service"
+    label: "* Service"
   },
   name: {
     type: String,
-    label: "Name",
+    label: "* Name",
   },
   street: {
     type: String,
@@ -25,11 +25,13 @@ ConnectionSchema = new SimpleSchema({
   },
   state: {
     type: String,
-    label: "State",
+    label: "* State",
   },
   zip: {
     type: String,
+    regEx: SimpleSchema.RegEx.ZipCode,
     label: "Zip Code",
+    max: 5,
     optional: true,
   },
   email: {
@@ -40,7 +42,8 @@ ConnectionSchema = new SimpleSchema({
   },
   phone: {
     type: String,
-    label: "Phone",
+    regEx: SimpleSchema.RegEx.Phone,
+    label: "* Phone",
   },
   text: {
     type: Boolean,
@@ -48,7 +51,7 @@ ConnectionSchema = new SimpleSchema({
   },
   membership_status: {
     type: String,
-    label: "I am a:"
+    label: "* I am a:"
   },
   age_range: {
     type: String,

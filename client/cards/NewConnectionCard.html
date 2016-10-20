@@ -13,13 +13,14 @@
         <div class="panel panel-default">
           <div class="panel-body">
     {{#autoForm collection="Connections" id="insertCardForm" type="insert"}}
+    <p><em class="red">* Required</em></p>
     <fieldset>
       {{> afQuickField name='service' options=services}}
     </fieldset>
     <fieldset>
       {{> afQuickField name='name'}}
-      {{> afQuickField name='email'}}
-      {{> afQuickField name='phone'}}
+      {{> afQuickField name='email' placeholder='office@stonemcc.comcastbiz.net'}}
+      {{> afQuickField name='phone' placeholder='276-647-8285'}}
       {{> afQuickField name='text'}}
     </fieldset>
     <fieldset>
@@ -27,7 +28,9 @@
     </fieldset>
     <fieldset>
       {{> afQuickField name='street'}}<br />
-      {{> afQuickField name='city'}} {{> afQuickField name='state'}}, {{> afQuickField name='zip'}}
+      {{> afQuickField name='city'}}
+      {{> afQuickField name='state' placeholder='VA'}}
+      {{> afQuickField name='zip'}}
     </fieldset>
     <fieldset>
       {{> afQuickField name='membership_status' options=membership}}<br />
