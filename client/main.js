@@ -1,5 +1,6 @@
 Template.registerHelper('formatDate', function(createdAt) {
-    return createdAt.toLocaleDateString();
+    //return createdAt.toLocaleDateString();
+    return moment(createdAt).day(-0).format("MM/DD/YYYY");
 });
 
 AutoForm.addHooks(['insertCardForm'], {

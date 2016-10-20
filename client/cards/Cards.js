@@ -7,7 +7,7 @@ Template.Cards.onCreated(function() {
 
 Template.Cards.helpers({
   connections: ()=>{
-    return Connections.find({});
+    return Connections.find({}, {sort: {createdAt: -1}});
   }
 });
 

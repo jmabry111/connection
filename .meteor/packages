@@ -41,3 +41,4 @@ twbs:bootstrap@=3.3.6
 stylus
 ian:accounts-ui-bootstrap-3@=1.2.89
 mrt:flash-messages
+momentjs:moment
