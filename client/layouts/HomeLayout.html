@@ -1,9 +1,12 @@
 <template name="HomeLayout">
+  {{> header}}
   <main class="home-layout">
     {{> flashMessages}}
     {{> Template.dynamic template=main}}
   </main>
+  <!--
   <div class="footer navbar-fixed-bottom">
-    <a class="see-cards pull-right" href="/card">View cards</a>
+      <a class="see-cards pull-right" href="/card">View cards</a>
   </div>
+  -->
 </template>
