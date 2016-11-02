@@ -1,12 +1,15 @@
 <template name="HomeLayout">
-  {{> header}}
   <main class="home-layout">
     {{> flashMessages}}
     {{> Template.dynamic template=main}}
   </main>
-  <!--
   <div class="footer navbar-fixed-bottom">
+    {{#if currentUser }}
       <a class="see-cards pull-right" href="/card">View cards</a>
+    {{else}}
+      <ul class="navbar-right">
+        {{> loginButtons }}
+      </ul>
+    {{/if}}
   </div>
-  -->
 </template>
