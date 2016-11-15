@@ -1,7 +1,9 @@
 <template name="footer">
   <div class="footer navbar-fixed-bottom">
     {{#if currentUser }}
-      <a class="see-cards pull-right" href="/card">View cards</a>
+      {{#if isInRole 'admin' }}
+        <a class="see-cards pull-right" href="/card">View cards</a>
+      {{/if}}  
     {{else}}
       <ul class="nav navbar-nav navbar-right">
         {{> loginButtons }}
