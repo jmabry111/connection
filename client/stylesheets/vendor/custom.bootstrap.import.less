@@ -924,6 +924,7 @@
 
 body {
   padding-bottom: 70px;
+  height: 100%;
 }
 .alert-success {
   text-align: center;
@@ -950,4 +951,16 @@ body {
   -ms-transition: opacity 0.6s ease-in, display 0.4s step-start;
   -moz-transition: opacity 0.6s ease-in, display 0.4s step-start;
   -webkit-transition: opacity 0.6s ease-in, display 0.4s step-start;
+}
+
+.full-height {
+  padding: 25px;
+  position: absolute;
+  top:52px;
+  bottom:0;
+  left:0;
+  right:0;
+  overflow:hidden;
+  background-color: @navbar-default-bg;
+  border-top: 1px solid @navbar-default-border;
 }
