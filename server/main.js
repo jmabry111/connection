@@ -4,8 +4,8 @@ Meteor.startup(() => {
   // code to run on server at startup
   if(Meteor.users.find().count() < 1) {
     var users = [
-      {email: 'jason@mymabry.com', roles: ['admin']}
-      {email: 'office@stonemcc.comcastbiz.net, roles: ['admin']}
+      {email: 'jason@mymabry.com', roles: ['admin']},
+      {email: 'office@stonemcc.comcastbiz.net', roles: ['admin']}
     ];
 
     _.each(users, function(user) {

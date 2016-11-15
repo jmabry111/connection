@@ -1,0 +1,15 @@
+<template name="sidebar">
+  <nav class="col-sm-3 col-md-2 sidebar full-height">
+    {{#autoForm collection="WeekInfo" id="insertWeekInfoForm" type="insert"}}
+    <ul class="nav nav-sidebar">
+      <li>{{> afQuickField name='isMeal'}}</li>
+      <li>{{> afQuickField name='currentMeal'}}</li>
+    </ul>
+    <button type="submit" form="insertWeekInfoForm" class="btn btn-primary">Update Meal Info</button>
+    {{/autoForm}}
+    <br /><hr><br />
+    {{#if isMeal}}
+      {{currentMeal}}
+    {{/if}}
+  </nav>
+</template>
