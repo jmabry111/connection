@@ -1,4 +1,4 @@
-Connections = new Meteor.Collection('connections');
+Connections = new Mongo.Collection('connections');
 
 Connections.allow({
 
