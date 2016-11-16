@@ -19,4 +19,7 @@ Meteor.startup(() => {
       }
     });
   }
+  if(WeekInfo.find().count() < 1) {
+    WeekInfo.insert({isMeal: true, currentMeal: "Food"});
+  }
 });
