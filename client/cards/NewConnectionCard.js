@@ -13,6 +13,14 @@ Template.NewConnectionCard.events({
   }
 });
 
+Template.NewConnectionCard.rendered = function(){
+  var noMeal = document.getElementById('no');
+  var wed = document.getElementById('wednesday');
+  if (noMeal){
+    wed.style.display="none";
+  }
+}
+
 Template.NewConnectionCard.helpers({
   services: ()=> {
     return [
