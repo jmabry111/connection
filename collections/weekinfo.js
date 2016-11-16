@@ -1,9 +1,9 @@
-WeekInfo = new Meteor.Collection('weekinfo');
+WeekInfo = new Mongo.Collection('weekinfo');
 
 WeekInfoSchema = new SimpleSchema({
   isMeal: {
     type: Boolean,
-    label: "Any meal this week?"
+    label: "Is there a meal this week?"
   },
   currentMeal: {
     type: String,
