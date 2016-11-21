@@ -9,3 +9,7 @@ Meteor.publish('weekinfo', function(){
 Meteor.publish(null, function(){
   return Meteor.roles.find({});
 });
+
+Meteor.publish('allUsers', function(){
+  return Meteor.users.find({});
+});
