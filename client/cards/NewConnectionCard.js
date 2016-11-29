@@ -48,15 +48,14 @@ Template.NewConnectionCard.helpers({
 });
 
 Template.NewConnectionCard.onRendered(function() {
-  var noMeal = document.getElementById('no');
   var wed = document.getElementById('wednesday');
-//  if (noMeal != null){
-//    wed.style.display="none";
-//  }
-//  else {
+  var info = document.getElementById('info');
+
+  if (info.innerHTML.includes("Wednesday")) {
+      wed.style.display = "none";
+    }
+  else {
     wed.style.display="block";
-//  }
-//  console.log(wed);
-//  console.log(noMeal);
+  }
 });
 

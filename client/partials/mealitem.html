@@ -1,9 +1,9 @@
 <template name="mealitem">
   <div id="meal-info">
     {{#if mealitem.isMeal}}
-      <p><strong>The meal for this week will be <em>{{mealitem.currentMeal}}</em></strong></p>
+      <p id="info"><strong>The meal for this week will be <em>{{mealitem.currentMeal}}</em></strong></p>
     {{else}}
-      <p id="no"><strong>There will be no Wednesday night meal this week.</strong></p>
+      <p id="info"><strong>There will be no Wednesday night meal this week.</strong></p>
     {{/if}}
   </div>
 </template>
