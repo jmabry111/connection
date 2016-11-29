@@ -16,11 +16,11 @@ Template.NewConnectionCard.events({
 Template.NewConnectionCard.rendered = function(){
   var noMeal = document.getElementById('no');
   var wed = document.getElementById('wednesday');
-  if (noMeal != null){
-    wed.style.display="none";
+  if (noMeal == null){
+    wed.style.display="block";
   }
   else
-    wed.style.display="block";
+    wed.style.display="none";
 }
 
 Template.NewConnectionCard.helpers({
