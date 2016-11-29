@@ -19,6 +19,8 @@ Template.NewConnectionCard.rendered = function(){
   if (noMeal){
     wed.style.display="none";
   }
+  else
+    wed.style.display="block";
 }
 
 Template.NewConnectionCard.helpers({
