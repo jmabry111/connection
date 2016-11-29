@@ -57,5 +57,6 @@ Template.NewConnectionCard.onRendered(function() {
   else {
     wed.style.display="block";
   }
+  console.log(info.innerHTML);
 });
 
