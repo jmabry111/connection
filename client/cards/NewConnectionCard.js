@@ -13,19 +13,6 @@ Template.NewConnectionCard.events({
   }
 });
 
-Template.NewConnectionCard.onRendered(function() {
-  var noMeal = document.getElementById('no');
-  var wed = document.getElementById('wednesday');
-  if (noMeal != null){
-    wed.style.display="none";
-  }
-  else {
-    wed.style.display="block";
-  }
-  console.log(wed);
-  console.log(noMeal);
-});
-
 Template.NewConnectionCard.helpers({
   services: ()=> {
     return [
@@ -59,3 +46,17 @@ Template.NewConnectionCard.helpers({
     ];
 }
 });
+
+Template.NewConnectionCard.onRendered(function() {
+  var noMeal = document.getElementById('no');
+  var wed = document.getElementById('wednesday');
+//  if (noMeal != null){
+//    wed.style.display="none";
+//  }
+//  else {
+    wed.style.display="block";
+//  }
+//  console.log(wed);
+//  console.log(noMeal);
+});
+
