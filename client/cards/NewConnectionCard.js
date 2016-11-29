@@ -48,6 +48,7 @@ Template.NewConnectionCard.helpers({
 });
 
 Template.NewConnectionCard.onRendered(function() {
+  Meteor.defer(function(){
   var wed = document.getElementById('wednesday');
   var info = document.getElementById('info');
 
@@ -58,5 +59,6 @@ Template.NewConnectionCard.onRendered(function() {
     wed.style.display="block";
   }
   console.log(info.innerHTML);
+  });
 });
 
