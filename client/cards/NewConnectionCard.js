@@ -13,7 +13,7 @@ Template.NewConnectionCard.events({
   }
 });
 
-Template.NewConnectionCard.rendered = function(){
+Template.NewConnectionCard.onRendered(function() {
   var noMeal = document.getElementById('no');
   var wed = document.getElementById('wednesday');
   if (noMeal != null){
@@ -22,7 +22,9 @@ Template.NewConnectionCard.rendered = function(){
   else {
     wed.style.display="block";
   }
-}
+  console.log(wed);
+  console.log(noMeal);
+});
 
 Template.NewConnectionCard.helpers({
   services: ()=> {
