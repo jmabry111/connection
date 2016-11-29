@@ -16,7 +16,7 @@ Template.NewConnectionCard.events({
 Template.NewConnectionCard.rendered = function(){
   var noMeal = document.getElementById('no');
   var wed = document.getElementById('wednesday');
-  if (noMeal){
+  if (noMeal != null){
     wed.style.display="none";
   }
   else
